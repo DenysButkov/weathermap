@@ -1,13 +1,95 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.app::before {
+content: '';
+background: url('./images/bg_nature.jpg') no-repeat center center/cover;
+position: absolute;
+width: 100%;
+height: 100%;
+top: 0;
+left: 0;
+z-index: -1;
+}
+
+.inp-field {
+  text-align: center;
+  padding: 2rem;
+}
+
+.inp-field input {
+padding: .7rem 1.5rem;
+font-size: 1.6rem;
+border-radius: 15px;
+border: 1px solid grey;
+background: rgba(255, 255, 255, 0.5);
+color: #8f8f8f;
+width: 100%;
+max-width: 400px; 
+margin: 0 auto; 
+}
+
+.container {
+  margin-top: 10vh;
+  text-align: center;
+}
+
+.city p {
+  font-style: oblique;
+  font-size: 10rem;
+  color: #fff;
+
+}
+
+.temp h1 {
+  color: #fff;
+  font-size: 12rem;
+}
+
+.desc p {
+  color: #fff;
+  font-size: 6rem;
+}
+
+.footer {
+  margin: 20vh auto 0;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 26px;
+  max-width: 600px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.bold {
+  font-weight: 800;
+}
+
+.feels p, .humidity p, .wind p {
+  text-align: center;
+  font-size: 2.35rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .city p {
+    font-size: 4rem; 
+  }
+  .temp h1 {
+    font-size: 6rem; 
+  }
+  .inp-field {
+    padding: 1rem; 
+  }
+
+  .footer {
+    margin-top: 10vh;
+    font-size: 4rem;
+  }
+
+  .footer > div {
+    flex-direction: column; 
+  }
 }
